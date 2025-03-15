@@ -1,0 +1,197 @@
+/* DocumentManager.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .document-manager {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  input[type="file"] {
+    border: none;
+    margin-bottom: 15px;
+  }
+  /* Button Styles */
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+  .upload-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .update-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  .edit-btn {
+    background-color: #28a745 !important;
+    color: white !important;
+  }
+  
+  .edit-btn:hover {
+    background-color: #218838 !important;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545 !important;
+    color: white !important;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333 !important;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  li h3 {
+    margin-bottom: 5px;
+  }
+  
+  li p {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  li a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-group button {
+    flex: 1;
+    margin: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .document-manager {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  
+    .btn-group {
+      flex-direction: column;
+    }
+  
+    .btn-group button {
+      margin-bottom: 5px;
+    }
+  }
+
+  .file-preview {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .preview-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    display: block;
+  }
+  
+  
+  .preview-pdf {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+  }
+  
+  
+  .file-preview > * {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ensure one image per row on smaller screens */
+  @media (max-width: 768px) {
+    .file-preview {
+      flex-direction: column;
+    }
+  
+    .preview-pdf {
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .preview-pdf {
+      height: 200px;
+    }
+  
+    .preview-image {
+      max-height: 250px;
+    }
+  }
+  
